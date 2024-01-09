@@ -1,0 +1,78 @@
+# Container Images, Where To Find Them and How To Build Them
+
+http://hub.docker.com
+
+docker image ls
+
+docker pull nginx
+
+docker pull nginx:1.11.9
+
+docker pull nginx:1.11
+
+docker pull nginx:1.11.9-alpine
+
+docker image ls
+
+docker image inspect nginx
+
+
+docker image tag -- help
+
+docker image ls
+
+docker pull mysql/mysql-server
+
+docker image ls
+
+docker pull nginx:mainline
+
+docker image ls
+
+docker image tag nginx hiep4hiep/nginx
+
+docker image tag --help
+
+docker image ls
+
+docker image push hiep4hiep/nginx
+
+docker --help
+
+docker login
+
+cat .docker/config.json
+
+docker image push hiep4hiep/nginx
+
+docker image push hiep4hiep/nginx hiep4hiep/nginx:testing
+
+docker image ls
+
+docker image push hiep4hiep/nginx:testing
+
+docker image ls
+
+
+docker image build -t customnginx .
+
+docker image ls
+
+docker image build -t customnginx .
+
+
+docker container run -p 80:80 --rm nginx
+
+docker image build -t nginx-with-html .
+
+docker container run -p 80:80 --rm nginx-with-html
+
+docker image ls
+
+docker image tag --help
+
+docker image tag nginx-with-html:latest hiep4hiep/nginx-with-html:latest
+
+docker image ls
+
+docker push

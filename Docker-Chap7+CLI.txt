@@ -1,0 +1,12 @@
+
+docker volume ls
+
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+
+docker volume inspect mysql-db
+
+docker volume create --help
+
+docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
+
+docker container run -d --name nginx2 -p 8080:80 nginx
