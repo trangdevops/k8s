@@ -1,0 +1,22 @@
+### Kiến trúc Kubernetes ###
+
+Tính năng:
+	- Cân bằng tải, triển khai 1 cách nhanh chóng
+	- Nâng cấp và triển khai các bản cập nhật mới của phần mềm
+	- Đảm báo mức hoạt động của dịch vụ
+	- 
+	- Bảo mật và quản lý cấu hình
+	- Tách phần lưu trữ (volume) của container riêng để quản lý đọc lập
+
+Chi tiết:
+
+*Kubernetes Master:
+	- API Server: tiếp nhận các yêu cầu, tương tác, request từ các worker, thành phần bên trong worker
+	- Scheduler: quản lý các tài nguyên trên các node
+	- Controller-Manager: điều phối trung tâm các thành phần
+	- etcd: database dành riêng k8s, lưu cấu hình, user, setup
+
+*Worker Node:
+	-  kube-proxy: quản lý network , kết nối các pod trên các node khác nhau trên cùng 1 overlay
+
+*Chú ý: hiện k8s không khuyến nghị sử dụng docker container runtime mà thay vào đó là sử dụng CRI-O, Containerd

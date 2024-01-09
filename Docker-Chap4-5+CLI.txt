@@ -1,0 +1,107 @@
+
+docker version
+
+docker info
+
+docker
+
+docker container run
+
+docker run
+
+## Starting a Nginx Web Server
+
+docker container run --publish 80:80 nginx
+
+docker container run --publish 80:80 --detach nginx
+
+docker container ls
+
+docker container ls -a
+
+docker container run --publish 80:80 --detach --name webhost nginx
+
+docker container logs webhost
+
+docker container top
+
+docker container top webhost
+
+docker container --help
+
+docker container rm 12f 145 av5
+
+
+## Container VS. VM: It's Just a Process
+
+docker container run --name nginx2 -d nginx
+
+docker ps
+
+docker container top mysql
+
+docker container top nginx2
+
+docker container inspect mysql
+
+docker container stats --help
+
+docker container stats
+
+docker container ls
+
+docker container run -help
+
+docker container run -it --name proxy nginx bash
+
+docker container ls
+
+docker container ls -a
+
+docker container run -it --name ubuntu ubuntu
+
+docker container ls
+
+docker container ls -a
+
+docker container start -ai ubuntu
+
+docker container exec -it mysql bash
+
+docker container run -it alpine bash
+
+docker container run -it alpine sh
+
+
+
+docker container run -p 80:80 --name webhost -d nginx
+
+docker container port webhost
+
+docker network ls
+
+docker network inspect bridge
+
+docker network create my_app_net
+
+docker network ls
+
+docker network create --help
+
+docker container run -d --name new_nginx --network my_app_net nginx
+
+docker network inspect my_app_net
+
+docker network connect
+
+docker container inspect
+
+docker container disconnect
+
+docker container exec -it my_nginx ping new_nginx
+
+docker container exec -it new_nginx ping my_nginx
+
+docker network ls
+
+docker container create --help
